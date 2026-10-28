@@ -156,7 +156,9 @@
   list-style: none;
 }
 .kitchen-notes li {
+  flex: none;
   font-size: 13px;
+  white-space: nowrap;
 }
 .kitchen-notes__link,
 .kitchen-notes__plain {
