@@ -1,0 +1,323 @@
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.12fr 1fr;
+  align-items: center;
+  column-gap: 9%;
+  row-gap: 0;
+  padding: 76px 0 0;
+}
+.hero__drawing {
+  min-width: 0;
+}
+.hero__copy {
+  padding: 0 4px 18px 0;
+}
+.hero__copy h1 {
+  font: clamp(46px, 5.8vw, 76px)/0.99 var(--display-font);
+  letter-spacing: -0.045em;
+  margin: 24px 0 24px;
+}
+.hero__copy h1 span {
+  display: block;
+}
+.hero__description {
+  max-width: 310px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+.hero__actions {
+  display: grid;
+  width: max-content;
+  max-width: 100%;
+  gap: 4px;
+  margin-top: 29px;
+}
+.hero__action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: left;
+  text-decoration: none;
+  transition: border-color 180ms;
+}
+.hero__action svg {
+  order: 1;
+  flex-shrink: 0;
+  transition: transform 180ms;
+}
+.hero__action:is(:hover, :focus-visible) {
+  border-color: var(--ink);
+}
+.hero__action:is(:hover, :focus-visible) svg {
+  transform: translate(3px, -3px);
+}
+.hero__action:is(:hover, :focus-visible) span {
+  text-decoration: none;
+}
+.hero__action:active svg {
+  transform: scale(0.92);
+}
+.hero__colophon {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: clamp(16px, 4vw, 46px) 0 20px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.hero__colophon a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  gap: 14px;
+  text-decoration: none;
+}
+.menu-section {
+  display: grid;
+  align-items: baseline;
+  grid-template-columns: 1fr 2.12fr;
+  gap: 28px 9%;
+  margin-inline: calc(-1 * var(--page-gutter));
+  padding: clamp(40px, 6vw, 77px) var(--page-gutter) clamp(52px, 7vw, 83px);
+}
+.menu-section--tinted {
+  background: var(--wash);
+}
+.section-margin {
+  align-self: baseline;
+  display: flex;
+  align-items: baseline;
+  gap: 19px;
+  font-size: 12px;
+}
+.section-number {
+  flex: 0 0 28px;
+  font: italic 23px/1 var(--display-font);
+  color: var(--muted);
+}
+.about {
+  grid-template-areas: "label heading" "portrait story" "portrait kitchens";
+  align-items: start;
+}
+.about .section-margin {
+  grid-area: label;
+}
+.about h2 {
+  grid-area: heading;
+}
+.about__portrait {
+  grid-area: portrait;
+  display: block;
+  width: min(100%, 260px);
+  height: auto;
+}
+.section-body {
+  min-width: 0;
+}
+.section-body h2,
+.section-heading {
+  font: 34px/1.2 var(--display-font);
+  letter-spacing: -0.02em;
+}
+.about__story {
+  grid-area: story;
+  max-width: 550px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.about__story p + p {
+  margin-top: 18px;
+}
+.kitchen-notes {
+  grid-area: kitchens;
+  border-top: 1px solid var(--rule);
+  padding-top: 20px;
+}
+.kitchen-notes > .eyebrow {
+  font-size: 10px;
+}
+.kitchen-notes ul {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.kitchen-notes li {
+  font-size: 13px;
+}
+.kitchen-notes__link,
+.kitchen-notes__plain {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 44px;
+  text-decoration: none;
+}
+.kitchen-notes__name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.kitchen-notes__arrow {
+  color: var(--muted);
+  transition: transform 180ms;
+}
+.kitchen-notes__link:is(:hover, :focus-visible) .kitchen-notes__name {
+  text-decoration: underline;
+}
+.kitchen-notes__link:is(:hover, :focus-visible) .kitchen-notes__arrow {
+  transform: translate(3px, -3px);
+}
+.section-intro {
+  color: var(--muted);
+  margin-top: 15px;
+  font-size: 14px;
+}
+.offerings {
+  margin-top: 33px;
+}
+.illustrated-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 32px;
+  align-items: center;
+}
+.offering {
+  padding: 34px 0;
+  border-top: 1px solid var(--rule);
+}
+.offering__number {
+  color: var(--muted);
+  font: italic 15px/1.5 var(--display-font);
+}
+.offering__eyebrow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.offering__copy {
+  min-width: 0;
+}
+.offering__art {
+  justify-self: center;
+}
+.offering__art--private-dinner {
+  max-width: 190px;
+}
+.offering h3 {
+  font: 27px/1.3 var(--display-font);
+  margin: 9px 0 12px;
+}
+.offering div > p:not(.eyebrow) {
+  max-width: 430px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.offering .editorial-link {
+  margin-top: 16px;
+  font-size: 11px;
+}
+@media (min-width: 1500px) {
+  .hero {
+    padding-top: 94px;
+  }
+}
+@media (max-width: 1000px) {
+  .illustrated-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .offering__art {
+    max-width: 240px;
+  }
+  .offering__art--private-dinner {
+    max-width: 180px;
+  }
+}
+@media (max-width: 900px) and (min-width: 701px) {
+  .hero {
+    gap: 5%;
+  }
+  .hero__copy h1 {
+    font-size: 51px;
+  }
+  .hero__description {
+    font-size: 14px;
+  }
+  .menu-section {
+    column-gap: 6%;
+    grid-template-columns: 0.8fr 2fr;
+  }
+}
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 24px;
+    gap: 0;
+  }
+  .hero__drawing {
+    width: min(65vw, 250px);
+    margin: 0 auto;
+  }
+  .hero__copy {
+    padding: 24px 0 0;
+    text-align: center;
+  }
+  .hero__copy .eyebrow {
+    font-size: 11px;
+  }
+  .hero__copy h1 {
+    font-size: clamp(46px, 12vw, 56px);
+    margin: 16px 0 20px;
+  }
+  .hero__description {
+    margin: auto;
+    max-width: 300px;
+    font-size: 14px;
+  }
+  .hero__actions {
+    margin: 22px auto 0;
+  }
+  .hero__colophon {
+    min-height: 64px;
+  }
+  .menu-section {
+    grid-template-columns: 1fr;
+  }
+  .section-margin {
+    position: static;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--ink);
+  }
+  .about {
+    grid-template-areas: "label" "heading" "portrait" "story" "kitchens";
+  }
+  .about__portrait {
+    width: min(100%, 280px);
+    margin: 0 auto;
+  }
+  .section-number {
+    font-size: 21px;
+  }
+  .section-body h2,
+  .section-heading {
+    font-size: 31px;
+  }
+  .kitchen-notes ul {
+    column-gap: 22px;
+  }
+}

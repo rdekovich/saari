@@ -1,0 +1,31 @@
+Saari — third-party notices
+
+The project's MIT license does not replace the licenses of its dependencies.
+License texts for software and fonts included in the website are retained
+in public/licenses/ and served under /licenses/ on saari.kitchen.
+
+React, React DOM and Scheduler
+  Copyright (c) Meta Platforms, Inc. and affiliates.
+  MIT — public/licenses/react.txt
+  https://github.com/facebook/react
+
+Lucide
+  Copyright (c) Lucide Contributors 2022.
+  Includes portions of Feather by Cole Bemis, distributed under MIT.
+  ISC — public/licenses/lucide.txt
+  MIT (Feather portions) — public/licenses/feather.txt
+  https://github.com/lucide-icons/lucide
+
+Libre Franklin
+  Copyright 2020 The Libre Franklin Project Authors.
+  SIL Open Font License 1.1 — public/licenses/libre-franklin.txt
+  https://github.com/googlefonts/Libre-Franklin
+
+IM Fell English
+  Copyright notice as supplied by Fontsource: Google Inc.
+  SIL Open Font License 1.1 — public/licenses/im-fell-english.txt
+  https://fontsource.org/fonts/im-fell-english
+
+Other development dependencies retain the notices and licenses distributed
+with their respective packages. Refresh the texts above when updating the
+corresponding dependencies.

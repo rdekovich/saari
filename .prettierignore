@@ -1,0 +1,10 @@
+node_modules/
+dist/
+package-lock.json
+public/brand/*.svg
+public/favicon.svg
+assets/source/
+test-results/
+playwright-report/
+docs/review/
+.wrangler/

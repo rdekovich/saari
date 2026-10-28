@@ -1,0 +1,54 @@
+{
+  "name": "saari",
+  "description": "A chef portfolio website built with React, TypeScript, and Vite.",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "homepage": "https://saari.kitchen",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdekovich/saari.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3000 --strictPort",
+    "build": "tsc -b && vite build && node scripts/prerender.mjs",
+    "preview": "vite preview --host 0.0.0.0 --port 3000 --strictPort",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test:unit": "playwright test --config playwright.unit.config.ts",
+    "test:e2e": "playwright test",
+    "test:hosting": "playwright test --config playwright.hosting.config.ts",
+    "check": "npm run format:check && npm run build && npm run test:unit && npm run test:e2e && npm run test:hosting",
+    "capture": "node scripts/qa/capture.mjs",
+    "assets:brand": "node scripts/assets/brand.mjs",
+    "assets:motion": "node scripts/assets/motion.mjs",
+    "assets:editorial": "node scripts/assets/editorial.mjs",
+    "assets:downloads": "node scripts/assets/downloads.mjs",
+    "deploy": "node scripts/qa/check-release.mjs && wrangler deploy"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "lucide-react": "0.468.0",
+    "@fontsource/libre-franklin": "5.3.0",
+    "@fontsource/im-fell-english": "5.3.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "@types/node": "22.20.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "5.2.0",
+    "prettier": "3.9.10",
+    "sharp": "0.35.5",
+    "typescript": "5.9.3",
+    "vite": "7.3.7",
+    "wrangler": "4.152.0"
+  }
+}

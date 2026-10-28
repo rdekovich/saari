@@ -1,0 +1,22 @@
+.contact__content {
+  align-items: start;
+}
+.contact__copy {
+  min-width: 0;
+}
+.contact__drawing {
+  max-width: 240px;
+  justify-self: center;
+  align-self: center;
+}
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin-top: 24px;
+}
+.contact__links .social-link {
+  color: var(--ink);
+  font-size: 14px;
+}

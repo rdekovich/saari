@@ -1,0 +1,23 @@
+Brand and editorial assets
+
+The MIT license in LICENSE applies to this repository's source code and
+technical documentation. It does not apply to Jacob Saari's branding,
+logos, illustrations, photographs, films, editorial copy or depictions of
+those materials in screenshots.
+
+These exclusions include:
+
+- Brand, illustration and photography files in assets/source/.
+- Files in public/brand/, public/illustrations/, public/images/ and public/motion/.
+- Preview images in docs/ and image or video derivatives made from these assets.
+- Jacob-specific editorial copy in src/config/ and generated page content.
+
+The assets are included for the presentation and development of Jacob
+Saari's website. No permission to reuse them as another person's or
+business's identity is granted by the code license. Obtain permission
+from the applicable rights holder for other uses that require permission.
+Any existing permissions and rights under applicable law remain unchanged.
+
+No trademark, endorsement or publicity rights are granted by the code
+license. Rights in third-party material remain with their respective
+holders. Fonts and interface icons retain the licenses listed in NOTICE.

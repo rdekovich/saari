@@ -1,0 +1,25 @@
+.theme-switch {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: none;
+  position: relative;
+}
+.theme-switch svg {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 16px;
+  height: 16px;
+}
+.theme-switch-sun {
+  opacity: var(--white-opacity);
+}
+.theme-switch-moon {
+  opacity: var(--black-opacity);
+}
+.theme-switch:hover {
+  background: var(--wash);
+}

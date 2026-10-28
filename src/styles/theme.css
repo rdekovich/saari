@@ -1,0 +1,44 @@
+:root {
+  color-scheme: light;
+  --paper-light: #fbfaf6;
+  --paper-dark: #171916;
+  --paper: var(--paper-light);
+  --ink: #20231e;
+  --muted: #64655d;
+  --rule: #cecec3;
+  --wash: #f0efe8;
+  --black-opacity: 1;
+  --white-opacity: 0;
+  --film-filter: none;
+  --film-blend: multiply;
+  --logo-alignment: translate(1.9936%, 1.4354%) scale(0.95);
+  --body-font: "Libre Franklin", Arial, sans-serif;
+  --display-font: "IM Fell English", Georgia, serif;
+  --page-pad: clamp(24px, 5vw, 76px);
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: var(--paper-dark);
+  --ink: #f4f3e9;
+  --muted: #b2b4a7;
+  --rule: #45493f;
+  --wash: #22251f;
+  --black-opacity: 0;
+  --white-opacity: 1;
+  --film-filter: invert(1);
+  --film-blend: screen;
+}
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: var(--paper-dark);
+    --ink: #f4f3e9;
+    --muted: #b2b4a7;
+    --rule: #45493f;
+    --wash: #22251f;
+    --black-opacity: 0;
+    --white-opacity: 1;
+    --film-filter: invert(1);
+    --film-blend: screen;
+  }
+}

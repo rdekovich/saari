@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="%THEME_COLOR_LIGHT%" />
+    <meta name="description" content="%SITE_DESCRIPTION%" />
+    <meta property="og:title" content="%SITE_TITLE%" />
+    <meta property="og:description" content="%SOCIAL_DESCRIPTION%" />
+    <meta property="og:image" content="%SOCIAL_IMAGE%" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="%SOCIAL_IMAGE_ALT%" />
+    <meta property="og:site_name" content="jacob saari" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="%SITE_TITLE%" />
+    <meta name="twitter:description" content="%SOCIAL_DESCRIPTION%" />
+    <meta name="twitter:image" content="%SOCIAL_IMAGE%" />
+    <meta name="twitter:image:alt" content="%SOCIAL_IMAGE_ALT%" />
+    <meta name="apple-mobile-web-app-title" content="jacob saari" />
+    <title>%SITE_TITLE%</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="%FAVICON_PNG%" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="%FAVICON%" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%APPLE_TOUCH_ICON%" />
+    <link rel="stylesheet" href="/src/features/arrival/arrival.css" />
+    <script>
+      (() => {
+        const html = document.documentElement;
+        html.dataset.js = "true";
+        let theme;
+        try {
+          theme = localStorage.getItem("saari-theme");
+          if (theme === "dark" || theme === "light") html.dataset.theme = theme;
+        } catch {}
+        const dark =
+          theme === "dark" ||
+          (theme !== "light" &&
+            matchMedia("(prefers-color-scheme: dark)").matches);
+        document.querySelector('meta[name="theme-color"]').content = dark
+          ? "%THEME_COLOR%"
+          : "%THEME_COLOR_LIGHT%";
+        if (
+          html.dataset.page === "home" &&
+          !matchMedia("(prefers-reduced-motion: reduce)").matches
+        ) {
+          html.dataset.arrival = "pending";
+          window.__saariBootDeadline = setTimeout(() => {
+            html.dataset.arrival = "complete";
+            const root = document.getElementById("root");
+            if (root) root.inert = false;
+          }, 5000);
+        } else html.dataset.arrival = "complete";
+      })();
+    </script>
+  </head>
+  <body>
+    <!--arrival-start-->
+    <div
+      id="arrival"
+      class="arrival"
+      role="region"
+      aria-label="An introduction to Jacob Saari’s kitchen"
+    >
+      <div class="arrival__backdrop"></div>
+      <div class="arrival__art" aria-hidden="true">
+        <img
+          class="arrival__still arrival__still--black"
+          src="/brand/logo-black.svg"
+          width="1254"
+          height="1254"
+          alt=""
+        />
+        <img
+          class="arrival__still arrival__still--white"
+          src="/brand/logo-white.svg"
+          width="1254"
+          height="1254"
+          alt=""
+        />
+        <video
+          id="arrival-video"
+          muted
+          autoplay
+          playsinline
+          preload="auto"
+          poster="/motion/tin-intro-poster.webp"
+          width="1000"
+          height="1000"
+          aria-hidden="true"
+          tabindex="-1"
+        >
+          <source src="/motion/tin-intro.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <button class="arrival__skip" id="arrival-skip" type="button">
+        skip intro
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M7 7h10v10M7 17 17 7" />
+        </svg>
+      </button>
+    </div>
+    <!--arrival-end-->
+    <!--app-start-->
+    <div id="root"></div>
+    <!--app-end-->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
