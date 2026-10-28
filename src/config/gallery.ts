@@ -27,11 +27,11 @@ export const galleryPhotos: readonly GalleryPhoto[] = [
     height: 4032,
   },
   {
-    id: "fish-prep",
-    label: "before service",
-    alt: "Rows of whole fish tied with kitchen twine on wire racks.",
-    width: 4284,
-    height: 5712,
+    id: "fish-course",
+    label: "fish",
+    alt: "A crisp-skinned fish fillet with golden sauce and green accents on a white plate.",
+    width: 2855,
+    height: 2913,
   },
   {
     id: "open-fire",
@@ -48,11 +48,11 @@ export const galleryPhotos: readonly GalleryPhoto[] = [
     height: 4032,
   },
   {
-    id: "at-the-pass",
+    id: "plated-course",
     label: "at the pass",
-    alt: "A pale plate of thin pink slices, green herbs and small colorful garnishes.",
-    width: 3024,
-    height: 4032,
+    alt: "A neatly arranged pink dish with green accents and crisp garnishes in a white bowl.",
+    width: 2803,
+    height: 2839,
   },
   {
     id: "plating",
