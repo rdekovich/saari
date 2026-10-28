@@ -10,8 +10,7 @@ export const biography = {
   title: "hi, i’m jacob.",
   paragraphs: [
     "i’m based in detroit and lead the kitchen at casa pernoi in birmingham.",
-    "i started out at five guys and have been cooking in restaurants ever since.",
-    "friends call me jake, or deens — from saari and sardines. seafood and open-fire cooking are what i keep coming back to.",
+    "friends call me jake, or deens — from saari and sardines. i started out at five guys and have been cooking in restaurants ever since. seafood and open-fire cooking are what i keep coming back to.",
   ],
   kitchensLabel: "a few kitchens i’ve been part of",
   kitchens: [

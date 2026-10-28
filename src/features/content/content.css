@@ -181,6 +181,24 @@
 .kitchen-notes__link:is(:hover, :focus-visible) .kitchen-notes__arrow {
   transform: translate(3px, -3px);
 }
+.kitchen-notes__mark {
+  flex: 0 0 18px;
+  height: 20px;
+  background: currentColor;
+  mask: center / contain no-repeat;
+  transition: background-color 180ms;
+}
+.kitchen-notes__mark--michelin-star {
+  --mark-accent: #bd2333;
+  mask-image: url("/marks/michelin-star.svg");
+}
+.kitchen-notes__mark--relais-chateaux {
+  --mark-accent: #b09767;
+  mask-image: url("/marks/relais-chateaux.svg");
+}
+.kitchen-notes__link:is(:hover, :focus-visible, :active) .kitchen-notes__mark {
+  background-color: var(--mark-accent);
+}
 .section-intro {
   color: var(--muted);
   margin-top: 15px;
@@ -320,17 +338,4 @@
   .kitchen-notes ul {
     column-gap: 22px;
   }
-}
-
-.kitchen-notes__mark {
-  flex: 0 0 18px;
-  height: 20px;
-  background: currentColor;
-  mask: center / contain no-repeat;
-}
-.kitchen-notes__mark--michelin-star {
-  mask-image: url("/marks/michelin-star.svg");
-}
-.kitchen-notes__mark--relais-chateaux {
-  mask-image: url("/marks/relais-chateaux.svg");
 }

@@ -1,9 +1,10 @@
   MichelinStar.svg — Nikolaos Dimos; revisions by Wikimedia contributors.
   CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
   Source: https://commons.wikimedia.org/wiki/File:MichelinStar.svg
-  File preserved; displayed in a monochrome CSS mask.
+  File preserved; displayed as a CSS mask with a red interaction accent.
   Relais & Châteaux emblem — property of Relais & Châteaux.
   Source: https://www.relaischateaux.com/_next/static/media/R&C_Logo.44877b58.svg
-  File preserved; displayed in a monochrome CSS mask.
+  Emblem path preserved; lettering removed and viewBox fitted to the emblem.
+  Displayed as a CSS mask with a gold interaction accent.
   These marks identify the listed venues, not awards to Jacob Saari or
   endorsements of this website. Trademark rights remain with their holders.
