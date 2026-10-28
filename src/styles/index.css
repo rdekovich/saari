@@ -4,5 +4,6 @@
 @import "../app/layout/layout.css";
 @import "../features/theme/theme.css";
 @import "../features/content/content.css";
+@import "../features/gallery/gallery.css";
 @import "../features/inquiry/inquiry.css";
 @import "../features/brand/brand.css";

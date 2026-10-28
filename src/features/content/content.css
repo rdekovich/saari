@@ -321,3 +321,16 @@
     column-gap: 22px;
   }
 }
+
+.kitchen-notes__mark {
+  flex: 0 0 18px;
+  height: 20px;
+  background: currentColor;
+  mask: center / contain no-repeat;
+}
+.kitchen-notes__mark--michelin-star {
+  mask-image: url("/marks/michelin-star.svg");
+}
+.kitchen-notes__mark--relais-chateaux {
+  mask-image: url("/marks/relais-chateaux.svg");
+}

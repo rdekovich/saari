@@ -4,7 +4,7 @@ import sharp from "sharp";
 await mkdir("public/illustrations", { recursive: true });
 await mkdir("public/images", { recursive: true });
 
-for (const name of ["private-dinner", "guest-dinner", "contact"]) {
+for (const name of ["private-dinner", "guest-dinner", "contact", "open-fire"]) {
   for (const width of [480, 960]) {
     await sharp(`assets/source/illustrations/${name}.png`)
       .resize({ width, withoutEnlargement: true })

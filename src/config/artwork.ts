@@ -1,4 +1,5 @@
 export const illustrations = {
+  "open-fire": { width: 1254, height: 1254 },
   "private-dinner": { width: 1254, height: 1254 },
   "guest-dinner": { width: 1536, height: 1024 },
   contact: { width: 1536, height: 1024 },

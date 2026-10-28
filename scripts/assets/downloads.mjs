@@ -1,5 +1,5 @@
 import sharp from "sharp";
-for (const name of ["private-dinner", "guest-dinner", "contact"]) {
+for (const name of ["private-dinner", "guest-dinner", "contact", "open-fire"]) {
   const { data, info } = await sharp(`assets/source/illustrations/${name}.png`)
     .flatten({ background: "#ffffff" })
     .greyscale()
@@ -14,4 +14,4 @@ for (const name of ["private-dinner", "guest-dinner", "contact"]) {
     .png()
     .toFile(`public/brand/${name}.png`);
 }
-console.log("Built transparent downloads from the three preserved drawings.");
+console.log("Built transparent downloads from the preserved drawings.");

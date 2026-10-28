@@ -2,7 +2,7 @@ node_modules/
 dist/
 package-lock.json
 public/brand/*.svg
-public/favicon.svg
+public/marks/*.svg
 assets/source/
 test-results/
 playwright-report/

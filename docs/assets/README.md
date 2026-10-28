@@ -32,3 +32,9 @@ The browser studio uses the catalog in `src/config/brand.ts`. Shared URLs restor
 Libre Franklin and IM Fell English are self-hosted through pinned Fontsource packages. Fonts and interface libraries retain their notices in `public/licenses/`; see [NOTICE](../../NOTICE). Refresh those texts when updating their dependencies.
 
 The code license excludes branding, illustrations, photography, films and editorial copy. See [ASSET-LICENSE](../../ASSET-LICENSE) before reusing these materials.
+
+## Gallery photographs and recognition marks
+
+Selected photographs live in `assets/source/photography/gallery/`. Run `npm run assets:gallery` to produce 480px, 960px and 1440px WebP copies in `public/images/gallery/`. Export strips metadata and preserves the photographed subject. Choose framing with CSS; do not invent food, plating or portrait details.
+
+The open-fire sardine is included in the illustration pipeline and brand catalog. Third-party venue marks live separately in `public/marks/`, with sources and rights in `NOTICE` and `public/licenses/kitchen-marks.txt`. They are not part of the downloadable Saari identity.
