@@ -1,6 +1,6 @@
 const title = "jacob saari, chef";
 const description =
-  "Jacob Saari is a chef based in Detroit, Michigan. Fish, shellfish, private dinners and collaborations. Chef de cuisine at Casa Pernoi.";
+  "Jacob Saari is a chef based in Detroit, Michigan. Seafood, open-fire cooking, private chef dinners and pop-ups. Chef de cuisine at Casa Pernoi.";
 export const pages = {
   home: {
     path: "/",

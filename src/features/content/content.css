@@ -150,28 +150,26 @@
 .kitchen-notes ul {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
+  column-gap: 20px;
   margin: 4px 0 0;
   padding: 0;
   list-style: none;
 }
 .kitchen-notes li {
+  flex: none;
   font-size: 13px;
+  white-space: nowrap;
 }
 .kitchen-notes__link,
 .kitchen-notes__plain {
   display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: 8px;
   min-height: 44px;
   text-decoration: none;
 }
-.kitchen-notes__name {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 .kitchen-notes__arrow {
+  flex: none;
   color: var(--muted);
   transition: transform 180ms;
 }
@@ -180,6 +178,25 @@
 }
 .kitchen-notes__link:is(:hover, :focus-visible) .kitchen-notes__arrow {
   transform: translate(3px, -3px);
+}
+.kitchen-notes__mark {
+  flex: none;
+  width: 18px;
+  height: 20px;
+  background: currentColor;
+  mask: center / contain no-repeat;
+  transition: background-color 180ms;
+}
+.kitchen-notes__mark--michelin-star {
+  --mark-accent: #bd2333;
+  mask-image: url("/marks/michelin-star.svg");
+}
+.kitchen-notes__mark--relais-chateaux {
+  --mark-accent: #b09767;
+  mask-image: url("/marks/relais-chateaux.svg");
+}
+.kitchen-notes__link:is(:hover, :focus-visible, :active) .kitchen-notes__mark {
+  background-color: var(--mark-accent);
 }
 .section-intro {
   color: var(--muted);
@@ -316,8 +333,5 @@
   .section-body h2,
   .section-heading {
     font-size: 31px;
-  }
-  .kitchen-notes ul {
-    column-gap: 22px;
   }
 }

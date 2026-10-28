@@ -29,7 +29,8 @@
     "assets:motion": "node scripts/assets/motion.mjs",
     "assets:editorial": "node scripts/assets/editorial.mjs",
     "assets:downloads": "node scripts/assets/downloads.mjs",
-    "deploy": "node scripts/qa/check-release.mjs && wrangler deploy"
+    "deploy": "node scripts/qa/check-release.mjs && wrangler deploy",
+    "assets:gallery": "node scripts/assets/gallery.mjs"
   },
   "dependencies": {
     "react": "19.3.1",

@@ -9,10 +9,10 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="menu-section menu-section--tinted contact"
+      className="menu-section contact"
       aria-labelledby="contact-heading"
     >
-      <SectionLabel number="iii." label={sectionLabels.contact} />
+      <SectionLabel number="iv." label={sectionLabels.contact} />
       <div className="section-body contact__content illustrated-row">
         <div className="contact__copy">
           <h2 id="contact-heading">{contact.title}</h2>

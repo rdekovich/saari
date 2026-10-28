@@ -32,12 +32,14 @@ export const metadata = {
 
 export const sectionLabels = {
   about: "the chef",
+  gallery: "the food",
   table: "at your table",
   contact: "say hello",
 } as const;
 
 export const navigation = [
   { href: "/#about", label: sectionLabels.about },
+  { href: "/#gallery", label: sectionLabels.gallery },
   { href: "/#table", label: sectionLabels.table },
   { href: "/#contact", label: sectionLabels.contact },
   { href: "/brand/", label: "brand" },

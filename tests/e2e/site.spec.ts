@@ -110,7 +110,7 @@ test("reduced motion, theme persistence, navigation and accessible enquiry", asy
   await page.goto("/");
   await expect(page.locator("#arrival")).toBeHidden();
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "a meal,",
+    "fish, fire",
   );
   const theme = page.getByRole("switch", { name: "Dark mode" });
   await theme.click();

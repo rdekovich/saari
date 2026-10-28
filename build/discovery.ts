@@ -9,6 +9,7 @@ import {
 } from "../src/config/content";
 import { pages } from "../src/config/pages";
 import { business, social } from "../src/config/site";
+import { gallery, galleryPhotos } from "../src/config/gallery";
 
 export function homeStructuredData(origin: string) {
   const url = new URL("/", origin).href;
@@ -67,7 +68,7 @@ export function renderLlms(origin: string): string {
       `Official website: ${url}`,
       "## Chef page",
       `- [Chef page in Markdown](${new URL("/index.md", origin).href}): Text version of the published chef page.`,
-      `- [Chef page](${url}): Biography, kitchen references, dinners and contact links.`,
+      `- [Chef page](${url}): Biography, kitchen references, food photographs, private chef cooking, pop-ups and contact links.`,
       "## Profiles",
       `- [Instagram](${social.instagram.url}): ${social.instagram.handle}.`,
       `- [LinkedIn](${social.linkedin.url}): ${social.linkedin.name}.`,
@@ -95,6 +96,18 @@ export function renderHomeMarkdown(origin: string): string {
             : `- ${kitchen.name}`,
         )
         .join("\n"),
+      `## ${gallery.title}`,
+      gallery.description,
+      ...galleryPhotos.map((photo) =>
+        [
+          `![${photo.alt}](${new URL(`/images/gallery/${photo.id}-960.webp`, origin).href})`,
+          photo.dish,
+          [photo.place, photo.date].filter(Boolean).join(" · "),
+          photo.note,
+        ]
+          .filter(Boolean)
+          .join("\n\n"),
+      ),
       `## ${table.title}`,
       table.description,
       ...offerings.flatMap((offering) => [

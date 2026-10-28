@@ -7,10 +7,10 @@ export function AtYourTable() {
   return (
     <section
       id="table"
-      className="menu-section table-section"
+      className="menu-section menu-section--tinted table-section"
       aria-labelledby="table-heading"
     >
-      <SectionLabel number="ii." label={sectionLabels.table} />
+      <SectionLabel number="iii." label={sectionLabels.table} />
       <div className="section-body">
         <h2 id="table-heading">{table.title}</h2>
         <p className="section-intro">{table.description}</p>

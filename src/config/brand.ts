@@ -32,6 +32,14 @@ export const brandAssets = [
     height: 1024,
   },
   {
+    id: "open-fire",
+    label: "over the fire",
+    src: "/brand/open-fire.png",
+    format: "png",
+    width: 1254,
+    height: 1254,
+  },
+  {
     id: "contact",
     label: "say hello",
     src: "/brand/contact.png",

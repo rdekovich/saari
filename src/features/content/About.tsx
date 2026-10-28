@@ -37,17 +37,22 @@ export function About() {
                   href={k.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`${k.name} (opens in a new tab)`}
+                  aria-label={`${k.name}${k.distinction ? `, ${k.distinction.label}` : ""} (opens in a new tab)`}
+                  title={k.distinction?.label}
                 >
-                  <span className="kitchen-notes__name">
-                    {k.name}
-                    <ArrowUpRight
-                      className="kitchen-notes__arrow"
-                      size={15}
-                      strokeWidth={1.5}
+                  {k.distinction && (
+                    <span
+                      className={`kitchen-notes__mark kitchen-notes__mark--${k.distinction.mark}`}
                       aria-hidden="true"
                     />
-                  </span>
+                  )}
+                  <span className="kitchen-notes__name">{k.name}</span>
+                  <ArrowUpRight
+                    className="kitchen-notes__arrow"
+                    size={15}
+                    strokeWidth={1.5}
+                    aria-hidden="true"
+                  />
                 </a>
               ) : (
                 <span className="kitchen-notes__plain">{k.name}</span>
