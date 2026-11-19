@@ -8,6 +8,7 @@ Keep the site a personal chef page: direct, specific to cooking and written in t
 | --------------------------------------------------------- | ----------------------- |
 | Identity, location, email, social profiles and navigation | `src/config/site.ts`    |
 | Hero, biography, selected kitchens and dinners            | `src/config/content.ts` |
+| Gallery photographs, dish notes, places and dates         | `src/config/gallery.ts` |
 | Page routes, titles and descriptions                      | `src/config/pages.ts`   |
 | Artwork metadata and alternative text                     | `src/config/artwork.ts` |
 | Brand catalog, studio copy and credits                    | `src/config/brand.ts`   |
@@ -33,6 +34,6 @@ The footer credits Rob Dekovich and links to the website source beside that cred
 
 `src/config/gallery.ts` selects the photographs and their order. Each entry accepts optional `dish`, `place`, `date` and `note` fields. Leave unconfirmed details empty. The preview displays bracketed placeholders; replace them with Jacob's words before publishing the gallery. Keep notes concise enough to read like a short introduction to a dish, without guessing ingredients or technique from an image.
 
-The native disclosure cards open with a tap, click, Enter or Space, and remain usable without JavaScript. Reduced motion disables their turn. Responsive WebP files come from the selected source photographs; CSS controls their framing without altering the food.
+Use city and state for gallery locations and month and year for dates. The native disclosure cards open with a tap, click, Enter or Space, and remain usable without JavaScript. Opened cards grow to fit their notes while closed photographs retain their framing. Reduced motion disables their turn. Responsive WebP files come from the selected source photographs; CSS controls their framing without altering the food.
 
 Kitchen recognition marks describe the venues, not personal awards. Verify Bastion's distinction through the [Michelin Guide](https://guide.michelin.com/us/en/tennessee/nashville_2790527/restaurant/bastion-1214985) and Blackberry Farm's membership through [Relais & Châteaux](https://www.relaischateaux.com/us/hotel/blackberry-farm/) when updating them. Relais & Châteaux is a membership association, not a Michelin star rating.
